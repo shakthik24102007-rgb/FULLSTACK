@@ -1,12 +1,19 @@
 import React from 'react'
-import Parent from './component/Parent' 
+import Parent from './components/Parent' 
+import State from './components/State'
+import Navbar from './components/Navbar'
+import {Routes,Route} from 'react-router-dom'
+
+
 const App = () => {
   return (
-    //Fragment tag
+    //Fragment Tag
     <>
-    <div>App</div>
-    <h1>Hello World</h1>
-    <parent/>
+  <Navbar/>
+   <Routes>
+    <Route path='/' element={<Parent/>}></Route>
+    <Route path='/useState' element={<State/>}/>
+   </Routes>
     </>
   )
 }
